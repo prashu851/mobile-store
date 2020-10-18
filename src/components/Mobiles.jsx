@@ -111,9 +111,9 @@ class Mobiles extends React.Component {
                 <Sort selected={this.state.selected} onSortChange={this.onSortChange} />
                 <div className="container">
                 <Grid container spacing={3}>
-                { this.state.selectedMobiles.map((mobile,index)=>
-                <Grid item xs={3}>
-                    <div className="box" key={index}>
+                { this.state.selectedMobiles.map((mobile)=>
+                <Grid item xs={3} key={mobile.id}>
+                    <div className="box">
                         <div className="mobile-image">
                             <img src={require('../realme.jpg')} alt="mobile-pic" /> 
                         </div>

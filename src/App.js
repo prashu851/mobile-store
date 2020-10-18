@@ -3,7 +3,7 @@ import './App.css';
 import Mobiles from './components/Mobiles';
 import Login from './components/Login/Login'
 import Signup from './components/Signup/Signup'
-import NavBar from './components/NavBar'
+import NavBar from './components/NavBar/NavBar'
 import Cart from './components/Cart'
 import {
   BrowserRouter as Router,
