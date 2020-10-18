@@ -1,0 +1,156 @@
+{
+    "mobiles":[
+        {
+            "brand":"Realme",
+            "name":"Realme 5 Pro",    
+            "colour":"Sparkling Blue",
+            "ramInGb":"6",
+            "internalStorage":"64",
+            "price": 14999
+        },
+        {
+            "brand":"Redmi",
+            "name":"Redmi Note 9 Pro",
+            "colour":"In telarBlack",
+            "ramInGb":"4",
+            "internalStorage":"64",
+            "price":12999
+        },
+        {    
+            "brand":"Samsung",
+            "name":"Samsung Galaxy A51",
+            "colour":"Prism Crush Blue",
+            "ramInGb":"6",
+            "internalStorage":"128",
+            "price":23999
+        },
+        {
+            "brand":"OnePlus",
+            "name":"OnePlus 7T Pro",
+            "colour":"Haze Blue",
+            "ramInGb":"8",
+            "internalStorage":"256",
+            "price":43999
+        },
+        {
+            "brand":"Oppo",
+            "name":"OPPO A5s",
+            "colour":"Black",
+            "ramInGb":"4",
+            "internalStorage":"64",
+            "price":10990
+        },
+        {
+            "brand":"Apple",
+            "name":"Apple iPhone 11",
+            "colour":"White",
+            "ramInGb":"6",
+            "internalStorage":"64",
+            "price":68300
+        },
+        {
+            "brand":"Samsung",
+            "name":"Samsung Galaxy A21s",
+            "colour":"Black",
+            "ramInGb":"6",
+            "internalStorage":"64",
+            "price":17299
+        },
+        {
+            "brand":"Poco",
+            "name":"Poco X2",
+            "colour":"Atlantis Blue",
+            "ramInGb":"6",
+            "internalStorage":"64",
+            "price":17499
+        },
+        {
+            "brand":"Samsung",
+            "name":"Samsung Galaxy A71",
+            "colour":"Haze Crush Silver",
+            "ramInGb":"8",
+            "internalStorage":"128",
+            "price":30999
+        },
+        {
+            "brand":"Apple",
+            "name":"Apple iPhone XR",
+            "colour":"Blue",
+            "ramInGb":"6",
+            "internalStorage":"128",
+            "price":57800
+        },
+        {
+            "brand":"Vivo",
+            "name":"Vivo U10",
+            "colour":"Thunder Black",
+            "ramInGb":"3",
+            "internalStorage":"32",
+            "price":10990
+        },
+        {
+            "brand":"Samsung",
+            "name":"Samsung Galaxy M30S",
+            "colour":"White",
+            "ramInGb":"4",
+            "internalStorage":"128",
+            "price":17599
+        },
+        {
+            "brand":"Realme",
+            "name":"Realme X2 Pro",
+            "colour":"Neptune",
+            "ramInGb":"8",
+            "internalStorage":"128",
+            "price":31999
+        },
+        {
+            "brand":"Oppo",
+            "name":"OPPO A31",
+            "colour":"White",
+            "ramInGb":"4",
+            "internalStorage":"64",
+            "price":12490
+        },
+        {
+            "brand":"Asus",
+            "name":"Asus ROG Phone II",
+            "colour":"Black",
+            "ramInGb":"8",
+            "internalStorage":"128",
+            "price":39999
+        },
+        {
+            "brand":"Vivo",
+            "name":"Vivo X50",
+            "colour":"Frost Blue",
+            "ramInGb":"8",
+            "internalStorage":"128",
+            "price":34990
+        },
+        {
+            "brand":"Redmi",
+            "name":"Redmi K20 Pro",
+            "colour":"Glacier Blue",
+            "ramInGb":"6",
+            "internalStorage":"128",
+            "price":22999
+        },
+        {
+            "brand":"Vivo",
+            "name":"Vivo Z1 Pro",
+            "colour":"Sonic Black",
+            "ramInGb":"4",
+            "internalStorage":"64",
+            "price":14990
+        },{
+            "brand":"Oppo",
+            "name":"Oppo Reno3 Pro",
+            "colour":"White",
+            "ramInGb":"8",
+            "internalStorage":"128",
+            "price":27990
+        }
+
+    ]
+}

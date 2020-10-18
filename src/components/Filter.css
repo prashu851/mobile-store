@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+}
+
+.filter-container{
+    position:fixed;
+    width:200px;
+    box-shadow: 0px 0px 0.5px;
+    top:135px;
+    left:20px;
+    background-color: white;
+}
+.filter-container h3{
+    padding:10px;
+}
+.filter-box{
+    margin-left: 10px;
+}

@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+    font-family: "Oswald"
+
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    width:800px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-left: 275px;
+}
+
+.box{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:200px;
+    min-height:50px;
+    background-color: white;
+    transition: box-shadow .5s ease ;
+}
+.box:hover{
+    box-shadow:0 16px 16px rgba(0,0,0,0.15);
+    
+}
+.mobile-image{
+    margin-top: 10px;
+}
+h3,h4{
+    margin:0;
+    padding:0
+}
+.mobile-price,.buy-btn{
+    margin-bottom: 10px;
+}
+.buy-btn{
+    display: flex;
+    
+}
+.buy-btn .MuiButton-containedPrimary{
+    position:relative;
+    
+}
+.sorting-btns{
+display:flex;
+align-items: center;
+justify-content: center;
+margin-top: 80px;
+
+}
+.sorting-btns .Selected{
+    background-color:#2d2a32;
+    
+}
+.sorting-btns .Selected:hover{
+    background-color:#2d2a32;
+}
+.cart-btn{
+    margin-bottom: 10px;
+}

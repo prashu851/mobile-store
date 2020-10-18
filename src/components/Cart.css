@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+}
+.cart-container{
+    width:40%;
+    background-color: white;
+    margin:0 auto;
+    margin-top: 90px;
+    box-shadow:0 16px 16px rgba(0,0,0,0.15);
+    margin-bottom: 10px;
+}
+.cart-container h2{
+    margin:5px 20px 
+
+}
+.cart-items{
+    display: flex;
+    margin:10px 0px -50px 0px
+}
+.mobile-pic{
+    float: left;
+    margin-left:40px
+}
+.mobile-pic img{
+    height:60%
+}
+.remove-btn{
+    margin-top: 5px;
+    height:40px;
+    width:80px;
+    color:white;
+    background-color: #2e282a;
+    outline: none;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+}
