@@ -28,7 +28,7 @@ class NavBar extends React.Component {
             <div className="nav-bar">
                 <div className="app-name">
                     <a href={this.state.isSignedInUser? "/mobiles" : "/"}>
-                         <h3>Mobile Store</h3>
+                        <h3>Mobile Store</h3>
                     </a>
                 </div>
                 <CartIcon show={this.state.isSignedInUser}/>

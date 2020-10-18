@@ -24,22 +24,23 @@
 .home-btn{
     margin-left:850px;
 }
+.cart{
+    float: right;
+    margin-left: 1050px;
+}
 .cart .MuiIconButton-root{
     color:white;
-    margin-left: 15px;
+   
 }
-.login-btn a:link,a:visited{
-    background-color:#2d2a32;
-    padding: 8px 25px;
-    color: white;
-    text-decoration: none;
-    margin-left: 30px;
-    box-shadow: 0px 0px 2px white;
-    border-radius: 3px;
-}
-.home-btn a:link,a:visited{
-    background-color:#2d2a32;
-    padding: 14px 25px;
-    color: white;
-    text-decoration: none;
+.login-btn{
+    float: right;
+    margin-left: 20px;
+    color:white;
+    background-color: #2d2a32;
+    border:1px solid white;
+    outline: none;
+    border-radius: 5px;
+    width:70px;
+    height:35px;
+    cursor: pointer;
 }

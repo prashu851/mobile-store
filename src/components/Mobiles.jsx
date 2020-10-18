@@ -17,87 +17,56 @@ class Mobiles extends React.Component {
             selectedMobiles:[],
             brands: {},
             selectedBrands: {},
-            selected:RELEVANCE
+            selectedSort: RELEVANCE
         }
         this.mobilesData = this.mobilesData.bind(this)
         this.handleFilter = this.handleFilter.bind(this)
         this.handleRelevance=this.handleRelevance.bind(this)
         this.onSortChange=this.onSortChange.bind(this)
-        this.handleSort=this.handleSort.bind(this)
     }
 
     mobilesData(body){
-        const reduceToObj = (accumulator, mobile) => {
+        const reduceToBrand = (accumulator, mobile) => {
             accumulator[mobile.brand]=false;
             return accumulator;
         }
-        const uniqueBrands = body.reduce(reduceToObj, {});
+        const uniqueBrands = body.reduce(reduceToBrand, {});
         this.setState({
             selectedMobiles : cloneDeep(body),
             defaultData : cloneDeep(body),
             brands : uniqueBrands,
         });
     }
-    handleFilter(e, brand){
-        const oldBrands = this.state.brands;
-        const newBrands = {...oldBrands, [brand]:e.target.checked};
-        const allMobiles = [...this.state.defaultData];
-        const isAnyBrandSelected = Object.values(newBrands).some(isSelected=> isSelected);
+    handleFilter(checked, brand){
+        const { brands: oldBrands, selectedSort, defaultData } = this.state;
+        const newBrands = {...oldBrands, [brand]:checked};
+        const allMobiles = [...defaultData];
+        const isAnyBrandSelected = Object.values(newBrands).some(isSelected => isSelected);
         const selectedMobiles = isAnyBrandSelected ? allMobiles.filter(mobile => newBrands[mobile.brand]) : allMobiles;
-        const sortedMobiles = selectedMobiles.sort((a,b)=>{
-            if(this.state.selected==="Ascending"){
-                return b.price < a.price ?  1 
-                     : b.price > a.price ? -1 
-                     : 0;
-            }
-            else if(this.state.selected==="Descending"){
-                return b.price > a.price ?  1 
-                     : b.price < a.price ? -1 
-                     : 0;
-            }
-            
-        })
+        const sortedMobiles = selectedMobiles.sort(selectedSort.comparator);
+
         this.setState({
             brands: newBrands,
             selectedMobiles: sortedMobiles       
         });
-        
-    }
-    sortByAscending(a,b){ 
-        return b.price < a.price ?  1 
-             : b.price > a.price ? -1 
-             : 0;
-    }
-    sortByDescending(a,b){ 
-        return b.price > a.price ?  1 
-             : b.price < a.price ? -1 
-             : 0;
     }
     handleRelevance(){
        this.setState({
             selectedMobiles: [...this.state.defaultData],
-            brands:mapValues(this.state.brands,()=>false)
-        })
-    }
-    handleSort(sortByFunc){
-        const sortedMobiles = this.state.selectedMobiles.sort(sortByFunc)                   
-        this.setState({
-            selectedMobiles:sortedMobiles,   
-        })
+            brands:mapValues(this.state.brands,()=>false),
+            selectedSort: RELEVANCE
+        });
     }
     onSortChange(selectedSort){
-        if(selectedSort === "Ascending"){
-            this.handleSort(this.sortByAscending)
+        if (selectedSort.isRelevance()) {
+            this.handleRelevance();
+        } else {
+            const sortedMobiles = this.state.selectedMobiles.sort(selectedSort.comparator)
+            this.setState({
+                selectedMobiles:sortedMobiles,
+                selectedSort: selectedSort
+            });
         }
-        else if(selectedSort === "Descending"){
-            this.handleSort(this.sortByDescending)
-        }
-        else{
-            this.handleRelevance()  
-        }
-        this.setState({
-            selected:selectedSort
-        })
     }
     componentDidMount(){
         fetchMobiles()
@@ -107,8 +76,8 @@ class Mobiles extends React.Component {
     render(){
         return  (
                 <>
-                <Filter types={this.state.brands} handleFilter={this.handleFilter} selectedBrands={this.selectedBrands} />
-                <Sort selected={this.state.selected} onSortChange={this.onSortChange} />
+                <Filter types={this.state.brands} handleFilter={this.handleFilter} />
+                <Sort selectedSort={this.state.selectedSort} onSortChange={this.onSortChange} />
                 <div className="container">
                 <Grid container spacing={3}>
                 { this.state.selectedMobiles.map((mobile)=>
