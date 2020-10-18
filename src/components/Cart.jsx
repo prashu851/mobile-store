@@ -27,11 +27,12 @@ class Cart extends React.Component {
     }
 
     render(){
+        const { addedMobiles } = this.state;
         return(
             <div className="cart-container">
                 <h2>My Cart</h2>
                 <Divider />
-                {this.state.addedMobiles.map((mobile)=>
+                {addedMobiles.map((mobile)=>
                 <div key={mobile.id}>
                     <div className="cart-items">
                         <div className="mobile-pic">

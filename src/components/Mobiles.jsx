@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button'
 import Filter from './Filter'
 import cloneDeep from 'lodash/cloneDeep'
 import Sort from './Sort'
-import {RELEVANCE} from '../constants/SortTypes'
+import {RELEVANCE} from './SortTypes'
 import mapValues from 'lodash/mapValues'
 import { fetchMobiles } from '../firebaseClient';
 import { addToCart } from '../firebaseClient';

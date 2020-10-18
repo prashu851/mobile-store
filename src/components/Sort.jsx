@@ -1,7 +1,7 @@
 import React from 'react'
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Button from '@material-ui/core/Button'
-import {ASCENDING,DESCENDING,RELEVANCE} from '../constants/SortTypes'
+import {ASCENDING,DESCENDING,RELEVANCE} from './SortTypes'
 
 const Sort = ({ selectedSort, onSortChange }) => {    
     return(
