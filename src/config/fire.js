@@ -1,15 +1,14 @@
 import firebase from 'firebase'
 
-console.log('measurement id', process.env);
 const firebaseConfig = {
-    apiKey: process.env.API_KEY,
+    apiKey: process.env.REACT_APP_API_KEY,
     authDomain: "mobile-store-bcba7.firebaseapp.com",
-    databaseURL: process.env.DATABASE_URL,
+    databaseURL: process.env.REACT_APP_DATABASE_URL,
     projectId: "mobile-store-bcba7",
     storageBucket: "mobile-store-bcba7.appspot.com",
-    messagingSenderId: process.env.MESSAGING_SENDER_ID,
-    appId: process.env.APP_ID,
-    measurementId: process.env.MEASUREMENT_ID
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID,
+    measurementId: process.env.REACT_APP_MEASUREMENT_ID
   };
 
 const fire = firebase.initializeApp(firebaseConfig)
