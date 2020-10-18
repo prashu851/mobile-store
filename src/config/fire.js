@@ -1,6 +1,6 @@
 import firebase from 'firebase'
 
-console.log('measurement id', process.env.MEASUREMENT_ID);
+console.log('measurement id', process.env);
 const firebaseConfig = {
     apiKey: process.env.API_KEY,
     authDomain: "mobile-store-bcba7.firebaseapp.com",
