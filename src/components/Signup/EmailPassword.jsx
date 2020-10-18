@@ -26,7 +26,7 @@ isValidEmail(){
   this.props.setError(!validEmail || this.state.passwordError)
 }
 isValidPassword(){
-  const passwordPattern = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+  const passwordPattern = new RegExp("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])([a-zA-Z0-9@$!%*?&]{8,})$");
   const validPassword = passwordPattern.test( this.props.password);
   this.setState({
       passwordError:!validPassword
@@ -59,7 +59,8 @@ render(){
                         label="Password" 
                         variant="outlined"   
                         onChange={this.handleChange} 
-                        onBlur={this.isValidPassword} 
+                        onBlur={this.isValidPassword}
+                        helperText="atleast 8 characters, 1 lowercase, 1 uppercase and 1 special character" 
                         required 
                         />
                         {this.state.passwordError?<small>Please enter valid Password</small>:''}
