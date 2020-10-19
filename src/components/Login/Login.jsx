@@ -61,37 +61,37 @@ class Login extends React.Component {
         return (
             <>
             <div className="login-container">
-            <div className="login-form">
-                
-                <div className="user-input">
-                    <label className="label">Email</label>
-                    <TextField 
-                    onChange={this.onEmailChange} 
-                    onBlur={this.validateEmail}
-                    className="input"
-                    variant="outlined"
-                    required
-                    />
-                    {this.state.emailError ? <label className="error-text">Email is not valid</label> : ''}
+                <div className="login-form">
+                    
+                    <div className="user-input">
+                        <label className="label">Email</label>
+                        <TextField 
+                        onChange={this.onEmailChange} 
+                        onBlur={this.validateEmail}
+                        className="input"
+                        variant="outlined"
+                        required
+                        />
+                        {this.state.emailError ? <label className="error-text">Email is not valid</label> : ''}
+                    </div>
+                    
+                    <div className="user-input">
+                        <label className="label">Password</label>
+                        <TextField type="password" className="input" variant="outlined" onChange={this.onPasswordChange}/>
+                    </div>
+                    <div className="user-input">
+                        <Button 
+                        className="submit"
+                        onClick={this.onLoginSubmit}
+                        variant="contained"
+                        color="primary">
+                        Login
+                        </Button>
+                    </div>
+                    <div className="user-input">
+                        <a className="signup-link" href = "/signup">New customer? Create an account</a>
+                    </div>
                 </div>
-                
-                <div className="user-input">
-                    <label className="label">Password</label>
-                    <TextField type="password" className="input" variant="outlined" onChange={this.onPasswordChange}/>
-                </div>
-                <div className="user-input">
-                    <Button 
-                    className="submit"
-                    onClick={this.onLoginSubmit}
-                    variant="contained"
-                    color="primary">
-                    Login
-                    </Button>
-                </div>
-                <div className="user-input">
-                    <a className="signup-link" href = "/signup">New customer? Create an account</a>
-                </div>
-            </div>
             </div>
             </>
         )

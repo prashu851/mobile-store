@@ -21,20 +21,19 @@
     margin-left: 20px;
    
 }
-.home-btn{
-    margin-left:850px;
-}
 .cart{
-    float: right;
-    margin-left: 1050px;
+    position: absolute;
+    right:7em
 }
+
 .cart .MuiIconButton-root{
     color:white;
+    float:right
    
 }
 .login-btn{
-    float: right;
-    margin-left: 20px;
+    position: absolute;
+    right:1.5em;
     color:white;
     background-color: #2d2a32;
     border:1px solid white;
